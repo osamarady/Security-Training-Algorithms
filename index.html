@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<!-- Head Tag -->
+    <head>
+    	<!-- Meta Tags -->
+    	<meta charset="utf-8" />
+      	<meta name="viewport" content="width=device-width" />
+        <meta name="description" content="This is an Security Training" />
+
+      	<!-- Chrome, Firefox OS and Opera -->
+    	<meta name="theme-color" content="#34495e" />
+    	<!-- Windows Phone -->
+    	<meta name="msapplication-navbutton-color" content="#34495e" />
+    	<!-- iOS Safari -->
+    	<meta name="apple-mobile-web-app-status-bar-style" content="#34495e" />
+        
+        <title>Security Container</title>
+        <!-- FavIcon -->
+        <link rel="shortcut icon" href="favicon.png" />
+        <!-- Bootstrap Style -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <!-- My Custom Style -->
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <!-- Body Tag -->
+    <body>
+		<!-- Navbar Tag -->
+		<nav class="navbar-fixed-top" role="navigation">
+			<div class="container">
+				<ul class="topnav" id="myTopnav">
+					  <li class="icon">
+						<a href="#" style="font-size:15px;" onclick="navBar()">☰</a>
+					  </li>
+					  <li><a href="#caesar cipher">caesar cipher</a></li>
+					  <li><a href="#substitution cipher">substitution cipher</a></li>
+					  <li><a href="#Vigenere Cipher">Vigenere Cipher</a></li>
+					  <li><a href="#Vernam Cipher">Vernam Cipher</a></li>
+                      <li><a href="#key calculater">key calculater</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- Caesar Cipher -->
+		<article id="caesar cipher">
+			<section class="container">
+				<div class="form row">
+					<section class="col-lg-12">
+						<h2>caesar cipher</h2>
+						<input type="number" class="form-control" placeholder="Type your key..." id="num">
+						<textarea rows="5" class="form-control" placeholder="Type your message..." id="txt"></textarea>
+						<button onclick="encryption()" class="btn btn-primary btn-block text-center">click</button>
+					</section>
+					<section class="col-lg-6"><div id="div" class="hidden"></div></section>
+					<section class="col-lg-6"><div id="div2" class="hidden"></div></section>
+				 </div>
+			</section>
+		</article>
+		<!-- Substitution Cipher -->
+		<article id="substitution cipher">
+			<section class="container">
+				<div class="form row">
+					<section class="col-lg-12">
+						<h2>substitution cipher</h2>
+						<table class="table table-condensed table-hover table-bordered table-striped">
+							<tr class="row">
+								<td class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+									<input type="number" class="form-control" placeholder="Type your Enc key..." id="num1">
+								</td>
+								<td class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+									<div id="sub1"></div>
+								</td>
+							</tr>
+							<tr class="row">
+								<td class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+									<input type="number" class="form-control" placeholder="Type your Dec key..." id="num2">
+								</td>
+								<td class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+									<div id="sub2"></div>
+								</td>
+						 	</tr>
+						</table>
+					</section>
+				</div>
+			</section>
+		</article>
+		<!-- Vigenere Cipher-->
+		<article id="Vigenere Cipher">
+		   <section class="container">
+			   <div class="form row">
+				   <section class="col-lg-12">
+					   <h2>Vigenere Cipher</h2>
+					   <input type="text" class="form-control" placeholder="Keyword" id="vig-key">
+					   <input type="text" class="form-control" placeholder="Plaintext" id="vig-pln">
+					   <button class="btn btn-primary btn-block text-center" id="vig-btn">click</button>
+					</section>
+					<section class="col-lg-12">
+						<div id="vig-cph" class="hidden"></div>
+					</section>
+				 </div>
+			</section>
+		</article>
+		<!-- Vernam Cipher-->
+		<article id="Vernam Cipher">
+		   <section class="container">
+			   <div class="form row">
+				   <section class="col-lg-12">
+					   <h2>Vernam Cipher</h2>
+					   <input type="text" class="form-control" placeholder="Write Your Message..." id="vnm">
+					   <button class="btn btn-primary btn-block text-center" id="vnm-btn">click</button>
+					</section>
+					<section class="col-lg-12">
+						<div id="vnm-cph" class="hidden"></div>
+					</section>
+				 </div>
+			</section>
+		</article>
+        <!-- Key Calculater -->
+		<article id="key calculater">
+		   <section class="container">
+			   <div class="form row">
+				   <section class="col-lg-12">
+					   <h2>Key Calculater</h2>
+					   <input type="text" class="form-control" placeholder="Type Plaintext" id="kpt">
+                       <input type="text" class="form-control" placeholder="Type Ciphertext" id="kct">
+					   <button class="btn btn-primary btn-block text-center" id="key-btn">click</button>
+					</section>
+					<section class="col-lg-12">
+						<div id="key" class="hidden"></div>
+					</section>
+				 </div>
+			</section>
+		</article>
+        <!-- Task -->
+        <article id="Task">
+		   <section class="container">
+			   <div class="form row" style="border:2px solid red !important">
+				   <section class="col-lg-12">
+					   <h2>Task</h2>
+                       <p>Allow 12 Character only</p>
+                       <div class="row">
+                           <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                           		<input type="text" class="form-control" placeholder="Write Your Message..." id="tsk">
+                           </div>
+                           <div class="col-lg-1 col-md-11 col-sm-11 col-xs-11 sensor" id="sensor"></div>
+                       </div>
+					</section>
+					<section class="col-lg-12">
+						<div id="tsk-div" class="hidden"></div>
+					</section>
+				 </div>
+			</section>
+		</article>
+		<!-- Scroll Button -->
+		<div class="navbar-fixed-bottom text-right"><button onclick="scrollWin()" class="button">Up!</button></div>
+		<!-- Main Scipt -->
+		<script src="js/main.js"></script>
+    </body>
+</html>
